@@ -1,0 +1,177 @@
+/* about.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+.protfolio-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.navlist {
+    display: flex;
+    gap: 3.5rem;
+    height: 15vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color:#23233a;
+}
+
+.navlist li {
+    list-style: none;
+}
+
+.navlist li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #fff;
+    position: relative;
+}
+
+.navlist li a::after,
+.navlist .active::after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: .1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.5s;
+}
+
+.navlist li a:hover::after,
+.navlist .active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.about-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#23233a 25%, #46619b 75%);
+    color: #fff;
+    margin-top: 0vh;
+}
+
+.profile-container {
+    margin-right: 2rem;
+}
+
+.profile-mixed {
+    width: 400px;
+    height: 400px;
+    background-image: url("image/profiles.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50% 20% 50% 20%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 40vh;
+    right: 2rem;
+}
+
+.button-container button {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #2a2a2d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #34495e;
+}
+
+.content {
+    text-align: center;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.additional-info {
+    margin-top: 2rem;
+}
+
+.additional-info h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #46619b;
+}
+
+
+.additional-info p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+#skills,
+#experience,
+#education {
+    background-color: #34495e;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+}
+
+.navlist .active a {
+    color: #46619b;
+}
+.additional-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.additional-info li {
+    margin-bottom: 10px;
+}
+
+.additional-info li i {
+    margin-right: 10px;
+}
+
+.additional-info .percent {
+    display: inline-block;
+    width: 30px; 
+    text-align: center;
+    background-color: #3498db;
+    color: #fff; 
+    border-radius: 50%; 
+    padding: 5px;
+}
