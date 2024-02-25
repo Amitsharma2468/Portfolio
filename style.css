@@ -110,4 +110,40 @@
 .navlist li a:hover::after, .navlist .active::after{
    transform: scaleX(1); 
    transform-origin: bottom left;
+} 
+@media screen and (max-width: 768px) {
+    .navlist {
+        flex-direction: column;
+        position: static;
+        background: #23233a;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .navlist li {
+        margin: 0.5rem 0;
+    }
+
+    .left-container, .right-container {
+        width: 100%;
+    }
+
+    .icons {
+        margin: 1rem 0;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .content {
+        margin: 1rem;
+        text-align: center;
+    }
+
+    .design .circle {
+        display: none;
+    }
+
+    .right-container {
+        background: linear-gradient(#23233a 25%, #46619b 75%);
+    }
 }
