@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('Drum.jpg'); 
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.keys {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.key {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 100px;
+    background-color: rgb(200, 225, 58); /* Golden color */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+}
+
+.key kbd {
+    font-size: 1.75rem;
+    margin-bottom: 5px;
+}
+
+.key:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.key:active {
+    transform: scale(1.2); /* Larger size when clicked */
+    border-color: darkblue; /* Dark blue border when clicked */
+}
+
+@media (max-width: 600px) {
+    .key {
+        width: 30px;
+        height: 60px;
+    }
+  
+    .key kbd {
+        font-size: 1rem;
+    }
+    .key span.sound {
+        font-size: 0.5rem;
+    }
+
+}
