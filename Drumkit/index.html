@@ -1,87 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="style.css">
+    <title>JS 30 Challenge Collection</title>
+    <link rel="stylesheet" href="project.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-    <div class="keys">
-        <div data-key="65" class="key">
-            <kbd>A</kbd>
-            <span class="sound">clap</span>
-        </div>
-         <div data-key="83" class="key">
-             <kbd>S</kbd>
-             <span class="sound">hithat</span>
-        </div>
-         <div data-key="68" class="key">
-             <kbd>D</kbd>
-             <span class="sound">kick</span>
-        </div>
-            <div data-key="70" class="key">
-                <kbd>F</kbd>
-                <span class="sound">openhat</span>
-            </div>
-                <div data-key="71" class="key">
-                    <kbd>G</kbd>
-                    <span class="sound">boom</span>
-                </div>
-                    <div data-key="72" class="key">
-                        <kbd>H</kbd>
-                        <span class="sound">ride</span>
+    <div class="protfolio-container">
+        <ul class="navlist">
+            <h1>Venila JS 30 Days Challenge</h1>
+        </ul>
+        <div class="projects-container">
+            <a href="/DrumKit/Drum.html" class="project-box-link">
+                <div class="project-box">
+                    <div class="icon">
+                        <i class="fa-solid fa-drum"></i>
                     </div>
-                        <div data-key="74" class="key">
-                            <kbd>J</kbd>
-                            <span class="sound">snare</span>
-                        </div>
-                            <div data-key="75" class="key">
-                                <kbd>K</kbd>
-                                <span class="sound">tom</span>
-                            </div>
-                                <div data-key="76" class="key">
-                                    <kbd>L</kbd>
-                                    <span class="sound">tink</span>
-                                </div>
+                    <h3>Task 1</h3>
+                    <p>Drum Kit</p>
+                    <h3>Project Language:</h3>
+                    <div class="project-language"> <i class="fa-brands fa-square-js"></i> JavaScript</div>
+                </div>
+            </a>
+        </div>
     </div>
-    <audio data-key="65" src="clap.mp3"></audio>
-    <audio data-key="83" src="hithat.mp3"></audio>
-    <audio data-key="68" src="kick.mp3"></audio>
-    <audio data-key="70" src="openhat.mp3"></audio>
-    <audio data-key="71" src="boom.mp3"></audio>
-    <audio data-key="72" src="ride.mp3"></audio>
-    <audio data-key="74" src="snare.mp3"></audio>
-    <audio data-key="75" src="tom.mp3"></audio>
-    <audio data-key="76" src="tink.mp3"></audio>
-   
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get all elements with the class 'key'
-            var keys = document.querySelectorAll('.key');
-    
-            // Add click event listener to each key
-            keys.forEach(function (key) {
-                key.addEventListener('click', function () {
-                    // Get the data-key attribute value
-                    var dataKey = this.getAttribute('data-key');
-    
-                    // Select the corresponding audio element and play it
-                    var audio = document.querySelector('audio[data-key="' + dataKey + '"]');
-                    if (audio) {
-                        audio.play();
-    
-                        // Stop the audio after 0.7 seconds
-                        setTimeout(function () {
-                            audio.pause();
-                            audio.currentTime = 0;
-                        }, 700);
-                    }
-                });
-            });
-        });
-    </script>
-    
 </body>
+
 </html>
