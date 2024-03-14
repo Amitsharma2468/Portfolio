@@ -4,9 +4,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    /* Add background image */
     background-image: url('watch.jpg');
-    /* Adjust background properties as needed */
     background-size: cover;
     background-repeat: no-repeat;
   }
