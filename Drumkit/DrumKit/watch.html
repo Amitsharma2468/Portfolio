@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Round Watch</title>
+  <link rel="stylesheet" href="watch.css">
+</head>
+<body>
+  <div class="watch">
+    <div class="hour-hand" id="hourHand"></div>
+    <div class="minute-hand" id="minuteHand"></div>
+    <div class="second-hand" id="secondHand"></div>
+    <div class="center"></div>
+
+  </div>
+
+  <script>
+    function updateClock() {
+  const now = new Date();
+  const hour = now.getHours() % 12;
+  const minute = now.getMinutes();
+  const second = now.getSeconds();
+
+  const hourHand = document.getElementById("hourHand");
+  const minuteHand = document.getElementById("minuteHand");
+  const secondHand = document.getElementById("secondHand");
+
+  const hourAngle = (hour * 30) + (0.5 * minute); // 30 degrees per hour, 0.5 degrees per minute
+  const minuteAngle = (minute * 6) + (0.1 * second); // 6 degrees per minute, 0.1 degrees per second
+  const secondAngle = second * 6; // 6 degrees per second
+
+  hourHand.style.transform = `rotate(${hourAngle}deg)`;
+  minuteHand.style.transform = `rotate(${minuteAngle}deg)`;
+  secondHand.style.transform = `rotate(${secondAngle}deg)`;
+}
+
+setInterval(updateClock, 1000); // Update every second
+
+</script>
+</body>
+</html>

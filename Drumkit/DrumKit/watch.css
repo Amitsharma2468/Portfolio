@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* Add background image */
+    background-image: url('watch.jpg');
+    /* Adjust background properties as needed */
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+.watch {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #f3f3f3;
+    border: 10px solid #333;
+  }
+  
+  .hour-hand, .minute-hand, .second-hand {
+    position: absolute;
+    background: black;
+    transform-origin: 50% 100%;
+  }
+  
+  .hour-hand {
+    width: 10px;
+    height: 50px;
+    top: 50px;
+    left: 95px;
+  }
+  
+  .minute-hand {
+    width: 8px;
+    height: 70px;
+    top: 30px;
+    left: 96px;
+  }
+  
+  .second-hand {
+    width: 4px;
+    height: 80px;
+    top: 20px;
+    left: 99px;
+    background: red;
+  }
+  
+  .center {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    top: 95px;
+    left: 95px;
+  }
+  
